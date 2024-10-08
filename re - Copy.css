@@ -1,0 +1,102 @@
+body{
+    background-color: rgba(173, 216, 230, 0.479);
+    animation: changeColor 5s ease infinite alternate; /* Animation properties */
+    
+  }
+  
+  @keyframes changeColor {
+     0% {
+        background-color: #f0f0f0; /* Initial color */
+     }
+     50% {
+        background-color: rgba(173, 216, 230, 0.493); /* Intermediate color */
+     }
+     100% {
+        background-color: #f0f0f0; /* Final color */
+     }
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  h2{
+    text-align: center;
+    text-size-adjust: auto;
+    text-shadow: 100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px; 
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 20px;
+    color: rgb(75, 73, 73);
+    
+  }
+  .container {
+    background-image: url(/images/RES.jpg);
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.5) for opacity */
+}
+
+
+
+.username-button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  /* Ensure button is initially visible */
+  display: none;
+}
+
+.username-button:hover {
+  background-color: #00478f;
+}
+
+.username-button:active {
+  background-color: #003567;
+}

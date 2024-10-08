@@ -1,0 +1,66 @@
+.ss {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Background color for the section */
+  }
+  
+  /* Style for each set of cards */
+  .card-set {
+    margin-bottom: 30px; /* Space between each set of cards */
+  }
+  
+  /* Style for individual cards */
+  .card {
+    width: calc(33.33% - 20px); /* Each card takes 33.33% width minus the gap */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff; /* Card background color */
+    /* Custom CSS */
+    padding: auto;
+    /* Customize card width and height */
+    width: 90%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    box-shadow: #666;
+  }
+  
+  /* Media query for responsive design */
+  @media (min-width: 768px) {
+    .card {
+      /* Customize card width for medium devices and above */
+      width: 100%; /* Adjust as needed */
+    }
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    width: 50%;
+    margin-left: 150px;
+    margin-top: 10px;
+    height: 150px; /* Reduced height for the card images */
+    object-fit: cover;
+    border-radius: 0px 10px 0 10px ;
+  }
+  
+  .card-body {
+    padding: 15px; /* Reduced padding for the card body */
+  }
+  
+  .card-title {
+    font-size: 1rem; /* Smaller font size for the card title */
+    font-weight: bold;
+    color: #333; /* Card title color */
+  }
+  
+  .card-text {
+    font-size: 0.9rem; /* Smaller font size for the card text */
+    color: #666; /* Card text color */
+  }
+  
+  .text-muted {
+    font-size: 0.8rem; /* Smaller font size for the timestamp */
+    color: #888; /* Timestamp color */
+  }

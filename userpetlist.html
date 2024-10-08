@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Pets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        #petList {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .petCard {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .petCard:hover {
+            transform: translateY(-5px);
+        }
+
+        .petCard img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .petInfo {
+            padding: 15px;
+        }
+
+        .petName {
+            font-size: 1.2em;
+            color: #333;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .petId {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #5c7aaf;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #674495;
+        }
+
+        .noPets {
+            text-align: center;
+            color: #666;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+
+
+
+
+
+
+    <div class="container">
+        <h1>We Were Waiting for You!!!</h1>
+        <div id="petList"></div>
+    </div>
+
+    <script>
+        async function fetchPets() {
+            try {
+                const response = await fetch('http://localhost:4000/list/pets');
+                const data = await response.json();
+
+                const petList = document.getElementById('petList');
+                petList.innerHTML = '';
+
+                if (data.count === 0) {
+                    const noPets = document.createElement('p');
+                    noPets.classList.add('noPets');
+                    noPets.textContent = 'No pets found';
+                    petList.appendChild(noPets);
+                } else {
+                    data.pets.forEach(pet => {
+                        const petCard = document.createElement('div');
+                        petCard.classList.add('petCard');
+
+                        petCard.innerHTML = `
+                            <img src="${pet.image}" alt="${pet.name}">
+                            <div class="petInfo">
+                                <p class="petName">${pet.name}</p>
+                                <p class="petId">ID: ${pet.petId}</p>
+                                <p class="Breed">Breed:${pet.breed}</p>
+                                <p class="Gender">Gender:${pet.gender}</p>
+                                <button class="button" onclick="adoptPet('${pet.petId}', '${pet.name}')">Adopt</button>
+                            </div>
+                        `;
+
+                        petList.appendChild(petCard);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching pets:', error);
+            }
+        }
+
+        function adoptPet(petId, petName) {
+            window.location.href = `adopt.html?id=${petId}&name=${encodeURIComponent(petName)}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchPets();
+        });
+    </script>
+</body>
+</html>

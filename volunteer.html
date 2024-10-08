@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Volunteer Form</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/volunteer.css">
+   <link rel="stylesheet" href="css/navfooter.css">
+   <style>
+     
+.btn-group {
+    display: flex;
+    justify-content:space-around; /* Adjust as needed */
+}
+
+
+
+
+   </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg" style="background-color:rgba(0, 255, 255, 0.171)">
+      <div class="container-fluid">
+        <img src="images/PFAlogo.jpeg" alt="Bootstrap" width="40" height="40">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  align-items-center" id="navbarNavDropdown">
+          
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="userpetlist.html">Adopt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="donate.html">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="volunteer.html">Volunteer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active mx-lg-2" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link mx-lg-2" href="success.html">Success Stories</a>
+             </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="aboutus.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn mx-lg-2" href="grantlogin.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Volunteer</h1>
+    <img src="images/s1.jpeg" width="300px" height="400px" class="center-image">
+    <p>We’re always looking for extra pairs of hands to help us around. You can join our growing family of selfless and dedicated volunteers and help support our cause by sparing some time to care for a pet in need, including participating in adoption drives.  And need we say this could be a great opportunity to show your love to animals and give back to the community?</p>
+    
+    <div class="containers">
+        <h1>Volunteer Form</h1>
+        <!--p>Thank you for wishing to volunteer with us. Kindly fill in this form to improve our services to help our voiceless friends and join our volunteer group. This will only take 5 minutes of your time.</p-->
+        <form id="volunteerForm">
+           <div class="form-group">
+              <label for="email">Email<span>*</span></label>
+              <input type="email" id="email" name="email" required>
+           </div>
+           <div class="form-group">
+              <label for="fullname">Full Name<span>*</span></label>
+              <input type="text" id="fullname" name="fullname" required>
+           </div>
+           <div class="form-group">
+              <label for="contact">Contact Number (Whatsapp)<span>*</span></label>
+              <input type="tel" id="contact" name="contact" required>
+           </div>
+           <div class="form-group">
+              <label for="address">Address<span>*</span></label>
+              <textarea id="address" name="address" required></textarea>
+           </div>
+           <div class="form-group">
+              <label for="occupation">Occupation<span>*</span></label>
+              <input type="text" id="occupation" name="occupation" required>
+           </div>
+           <div class="form-group">
+              <label for="how-know">How did you get to know about PFA?<span>*</span></label>
+              <select id="how-know" name="how-know" required>
+                 <option value="">Select One</option>
+                 <option value="Google Search">Google Search</option>
+                 <option value="PFA Website">PFA Website</option>
+                 <option value="PFA Social Media Accounts">PFA Social Media Accounts (Facebook, Instagram, Twitter etc.)</option>
+                 <option value="Newspaper articles">Newspaper articles</option>
+                 <option value="PFA Volunteer">PFA Volunteer</option>
+                 <option value="Word of mouth">Word of mouth</option>
+                 <option value="Other">Other</option>
+              </select>
+           </div>
+           <div class="form-group">
+            <label for="visited-shelter">Have you visited the PFA shelter ?<span>*</span></label>
+            <div class="btn-group">
+                <input type="radio" id="visited-yes" name="visited-shelter" value="Yes" required>
+                <label for="visited-yes">Yes</label>
+                <input type="radio" id="visited-no" name="visited-shelter" value="No" required>
+                <label for="visited-no">No</label>
+                <input type="radio" id="visited-would" name="visited-shelter" value="Would like to visit" required>
+                <label for="visited-would">Would like to visit.</label>
+            </div>
+        </div>
+        
+           <div class="form-group">
+              <label for="volunteer-options">How would you like to volunteer with us?<span>*</span></label>
+              <textarea id="volunteer-options" name="volunteer-options" required></textarea>
+           </div>
+           <div class="form-group">
+              <label for="other-ways">What are the other ways, you can volunteer with us ?</label>
+              <textarea id="other-ways" name="other-ways"></textarea>
+           </div>
+           <div class="form-group">
+              <label for="latest-info">Where do you get the latest information about PFA from?<span>*</span></label>
+              <textarea id="latest-info" name="latest-info" required></textarea>
+           </div>
+           <div class="form-group">
+              <label for="storytelling">Which mode of storytelling do you enjoy the most?<span>*</span></label>
+              <select id="storytelling" name="storytelling" required>
+                 <option value="">Select One</option>
+                 <option value="Animal videos">Animal videos</option>
+                 <option value="Picture essays">Picture essays</option>
+                 <option value="Blogs">Blogs</option>
+                 <option value="Rescue stories">Rescue stories</option>
+                 <option value="Adoption stories">Adoption stories</option>
+                 <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+               <label for="newsletter">Would you like to receive a monthly newsletter by us?<span>*</span></label>
+               <div class="btn-group">
+                   <input type="radio" id="newsletter-yes" name="newsletter" value="Yes" required>
+                   <label for="newsletter-yes">Yes</label>
+                   <input type="radio" id="newsletter-no" name="newsletter" value="No" required>
+                   <label for="newsletter-no">No</label>
+                   <input type="radio" id="newsletter-maybe" name="newsletter" value="Maybe" required>
+                   <label for="newsletter-maybe">Maybe</label>
+               </div>
+           </div>
+           
+            <div class="form-group">
+               <label for="donation-method">How would you like to make your donation?<span>*</span></label>
+               <textarea id="donation-method" name="donation-method" required></textarea>
+            </div>
+            <div class="form-group">
+               <label for="suggestions">Kindly give your valuable suggestions for the growth of our organization.<span>*</span></label>
+               <textarea id="suggestions" name="suggestions" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+         </form>
+      </div>
+      <br><br><br><br><br><br>
+      <footer class="footer">
+         <div class="container">
+            <div class="social-media">
+               <a href="https://www.instagram.com/peopleforanimalstrivandrum/?hl=en" class="social-link" target="_blank"><img src="images/insta.png" alt="instagram"></a>
+               <a href="https://www.facebook.com/PFATrivandrum/" class="social-link" target="_blank"><img src="images/fb.png" alt="facebook"></a>
+               <a href="https://x.com/Pfa_Tvm" class="social-link" target="_blank"><img src="images/x.png" alt="x"></a> 
+               <a href="https://www.youtube.com/@peopleforanimalsngo3469#" class="social-link" target="_blank"><img src="images/yt.png" alt="youtube"></a>
+               <a href="mailto:yourname@gmail.com" class="social-link"><img src="images/mail.png" alt="mail"></a>
+            </div>
+            <div class="contact-info" style="text-align: center;">
+               <p>Contact</p>
+               <p>Email: pfatvm7700@gmail.com</p>
+               <p>Phone: +1234567890</p>
+            </div>
+            <p>&copy; 2024 Happy Tails. All Rights Reserved.</p>
+            <p><img src="images/ehi.png" alt="emoji"></p>
+         </div>
+      </footer>
+
+      <script>
+         $(document).ready(function() {
+            $('#volunteerForm').submit(function(e) {
+               e.preventDefault(); // Prevent default form submission
+
+               // Serialize form data
+               var formData = $(this).serialize();
+
+               // Send AJAX request
+               $.ajax({
+                  type: 'POST',
+                  url: 'http://localhost:4000/volunteer/register',
+                  data: formData,
+                  success: function(response) {
+                     // Handle success response
+                     console.log(response);
+                     alert("Volunteer registered successfully");
+                     // You can redirect to another page or do other actions upon success
+                       // Reload the page after a delay
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                  },
+                  error: function(xhr, status, error) {
+                     // Handle error response
+                     console.error(xhr.responseText);
+                     alert("Error: Volunteer registration failed. Please try again later.");
+                  }
+               });
+            });
+         });
+      </script>
+</body>
+</html>

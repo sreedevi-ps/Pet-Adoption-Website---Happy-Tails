@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Adopted Pets</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 90%; /* Expanded width */
+    max-width: 1200px; /* Max width for larger screens */
+    background-color: lightblue;
+    color: #000000;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease forwards; /* Fade in animation */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .pet-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    animation: slideIn 0.8s forwards; /* Slide in animation */
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .pet-details {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .show-details {
+    display: block;
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .pet-name {
+    font-weight:450;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content:flex-start; 
+    margin-right: auto; 
+  }
+
+  .pet-info {
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+
+  .pet-details p {
+    margin: 0;
+    color: #0c0b0b;
+  }
+
+  button {
+    cursor: pointer;
+    background: 5px rgba(191, 122, 203, 0.7) ;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end; 
+    margin-left: auto; 
+    
+  }
+
+  button:hover {
+    background: 5px rgba(160, 72, 175, 0.7) ;
+  }
+
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  .pet-image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    float: left;
+  }
+  .details{
+     float: right;
+     margin: 10px auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Adopted Pets</h2>
+  <div id="welcomeMessage" style="text-align: center; font-size: 24px; opacity: 0; animation: fadeInMessage 1s ease forwards;">We got a home finally!</div>
+  <ul id="adoptedPetsList"></ul>
+</div>
+
+<script>
+  function fetchAdoptedPets() {
+    fetch('http://localhost:4000/admin/adopted-pets')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch adopted pets');
+        }
+        return response.json();
+      })
+      .then(data => {
+        displayAdoptedPets(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('adoptedPetsList').innerHTML = `<p>Error: ${error.message}</p>`;
+      });
+  }
+
+  function displayAdoptedPets(data) {
+    const adoptedPetsList = document.getElementById('adoptedPetsList');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    welcomeMessage.style.opacity = '1';
+
+    if (data.adoptedPets.length === 0) {
+      adoptedPetsList.innerHTML = '<p>No adopted pets found</p>';
+      return;
+    }
+
+    adoptedPetsList.innerHTML = '';
+
+    data.adoptedPets.forEach((pet, index) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('pet-item');
+      listItem.style.animationDelay = `${0.1 * index}s`;
+
+      // Check if user details exist and display them
+      const userDetails = pet.userId ? `<p><strong>User ID:</strong> ${pet.userId.emailId}</p><p><strong>User Name:</strong> ${pet.userId.name}</p>` : '';
+
+      // Create an image element to display the pet image
+      const petImage = new Image();
+      petImage.classList.add('pet-image');
+
+      // Set the image source to fetch from backend
+      petImage.src = `http://localhost:4000/pet/image/${pet._id}`;
+
+      listItem.innerHTML = `
+        <div class="pet-header">
+          <span class="pet-name">${pet.name}</span>
+          <button onclick="toggleDetails(this)">View Details</button>
+        </div>
+        <div class="pet-details">
+          ${petImage.outerHTML}
+          <div class="details">
+          <p><strong>Breed:</strong> ${pet.breed}</p>
+          <p><strong>Age:</strong> ${pet.age}</p>
+          <p><strong>Pet ID:</strong> ${pet.petId}</p>
+          ${userDetails}
+          </div>
+        </div>
+      `;
+      adoptedPetsList.appendChild(listItem);
+    });
+
+    setTimeout(() => {
+      welcomeMessage.style.opacity = '0';
+    }, 3000);
+
+    setTimeout(() => {
+      const petItems = document.querySelectorAll('.pet-item');
+      petItems.forEach((item, index) => {
+        item.style.animationDelay = `${0.1 * (index + data.adoptedPets.length)}s`;
+      });
+    }, 3000);
+  }
+
+  function toggleDetails(button) {
+    const petDetails = button.parentNode.nextElementSibling;
+    petDetails.classList.toggle('show-details');
+  }
+
+  window.onload = function() {
+    fetchAdoptedPets();
+  };
+</script>
+
+</body>
+</html>

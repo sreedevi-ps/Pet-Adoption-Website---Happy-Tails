@@ -1,0 +1,284 @@
+body{
+  background-color: lightblue;
+  animation: changeColor 5s ease infinite alternate; /* Animation properties */
+}
+
+@keyframes changeColor {
+   0% {
+      background-color: #f0f0f0; /* Initial color */
+   }
+   50% {
+      background-color: rgba(173, 216, 230, 0.493); /* Intermediate color */
+   }
+   100% {
+      background-color: #f0f0f0; /* Final color */
+   }
+}
+}
+
+.c-item{
+    height: 500px;
+   
+}
+.c-img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+/*p,h2{
+    color: rgb(32, 29, 29);
+    text-align: left;
+    margin: 50px;
+
+    
+}*/
+ p,h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(78, 78, 78);   
+ }
+.carousel-caption {
+    text-align: left;
+    left: 0;
+    margin: 60px;
+    
+  }
+  .btn{
+    border-radius: 5px rgba(113, 81, 119, 0.7) ;
+    background-color: rgba(170, 164, 164,.7);
+    left: 25px;
+}
+.btn-pri{
+  border-radius: 5px rgba(170, 164, 164,.7) ;
+}
+
+h1{
+    text-align: center;
+    text-size-adjust: auto;
+    text-shadow: 100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px; 
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 20px;
+    color: rgb(75, 73, 73);
+  }
+  
+nav{
+    border-radius: 5px;
+    margin: 5px;
+    
+}
+ .nav-link {
+    margin-left: 10px; /* Add space to the right of each nav link */
+}
+    
+.slideimg{
+  justify-content: center;
+  margin-left: 10px;
+  width: 60%;
+ 
+  margin-top: 10px;
+  height: 150px; /* Reduced height for the card images */
+  object-fit: cover;
+  border-radius: 0px 10px 0 10px ;
+}
+
+
+ .section{
+    top: 50px;
+ }
+ hr{
+    width: 2px;
+    height: auto;
+    
+ }
+ .divtext{
+
+ }
+ .about .container .row {
+    display: flex;
+  }
+  
+  .about .container .col-md-4 {
+    flex: 1;
+  }
+  .video-section .container .c1{
+    text-align: center;
+  }
+ .video-section .container .c1,
+.about .container .c2,
+.about .container .c3 {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(127, 255, 212, 0.315);
+}
+h3{
+    text-align: center;
+}
+#ss{
+  border:3px #333;
+}
+
+@media (max-width: 768px) {
+    Media query for small devices 
+    .carousel-caption {
+      text-align: center; 
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5); 
+      color: #fff; 
+      padding: 20px; 
+    }
+
+    .carousel-caption h2 {
+      font-size: 24px; 
+    }
+  } 
+
+  /* Style for the success stories section */
+/* Style for the success stories section */
+.ss {
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Background color for the section */
+}
+
+/* Style for each set of cards */
+.card-set {
+  margin-bottom: 30px; /* Space between each set of cards */
+}
+
+/* Style for individual cards */
+.card {
+  width: calc(33.33% - 20px); /* Each card takes 33.33% width minus the gap */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #debcf575; /* Card background color */
+  /* Custom CSS */
+  padding: auto;
+  /* Customize card width and height */
+  width: 90%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  box-shadow: #666;
+}
+
+/* Media query for responsive design */
+@media (min-width: 768px) {
+  .card {
+    /* Customize card width for medium devices and above */
+    width: 100%; /* Adjust as needed */
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 50%;
+  /* margin-left: 150px; */
+  margin-top: 10px;
+  height: 150px; /* Reduced height for the card images */
+  object-fit: cover;
+  border-radius: 0px 10px 0 10px ;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 15px; /* Reduced padding for the card body */
+}
+
+.card-title {
+  font-size: 1rem; /* Smaller font size for the card title */
+  font-weight: bold;
+  color: #333; /* Card title color */
+}
+
+.card-text {
+  font-size: 0.9rem; /* Smaller font size for the card text */
+  color: #666; /* Card text color */
+}
+
+.text-muted {
+  font-size: 0.8rem; /* Smaller font size for the timestamp */
+  color: #888; /* Timestamp color */
+}
+
+
+/*section adopt*/
+.body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: lightblue;
+  animation: changeColor 5s ease infinite alternate; /* Animation properties */
+}
+
+@keyframes changeColor {
+   0% {
+      background-color: #f0f0f0; /* Initial color */
+   }
+   50% {
+      background-color: rgba(173, 216, 230, 0.493); /* Intermediate color */
+   }
+   100% {
+      background-color: #f0f0f0; /* Final color */
+   }
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;
+  font-size:20px ;
+  color: #333;
+}
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.a-im
+{
+  height: 100%;
+  width: 110%;
+  margin-top: 30px;
+}
+
+section{
+  .resources
+} 
+
+
+.username-button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  /* Ensure button is initially visible */
+  display: none;
+}
+
+.username-button:hover {
+  background-color: #00478f;
+}
+
+.username-button:active {
+  background-color: #003567;
+}

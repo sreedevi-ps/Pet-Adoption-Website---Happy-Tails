@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/navfooter.css"/>
+   <link rel="stylesheet" href="css/home.css">
+   <style>
+   
+  </style>
+  
+   <title>Happy Tails</title>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg" style="background-color:#ba92d475;">
+    <div class="container-fluid">
+      <img src="images/PFAlogo.jpeg" alt="Bootstrap" width="50" height="50">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button><br>
+      <div class="collapse navbar-collapse  align-items-center" id="navbarNavDropdown">
+        
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active mx-lg-2" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="userpetlist.html">Adopt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="forAdopt.html">Post A Pet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" id="donateloggedbtn" href="donatelogged.html">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2"  id="volunteerloggedbtn" href="volunteerlogged.html">Volunteer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" id="resourceloggedbtn" href="resourcelogged.html">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2"  id="successloggedbtn" href="successlogged.html">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="aboutus logged.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <button id="usernameButton" class="username-button"></button>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <h1>HAPPY TAILS</h1>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="images/slide 0.jpg" class="d-block w-100 c-img img-fluid img responsive" alt="...">
+          <div class="carousel-caption mt-6">
+            
+            <h2 class="mt-5" style="font-size:5vw; color: rgb(0, 0, 0);">FIND YOUR FURRY FRIEND</h2>
+            <p style="font-size:2vw; color: rgb(0, 0, 0);">Find your lifelong companion today! Explore our adorable adoptable<br>pets for endless joy and love. Your perfect match awaits!</p>
+            <a class="btn" href="userpetlist.html">Find your furry friend</a>
+          </div>
+          <!-- <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="images/g-2.png" alt="">
+                  </div>
+                </div> -->
+        </div>
+        <div class="carousel-item c-item">
+          <img src="images/slide.jpg" class="d-block w-100 c-img img-fluid responsive" alt="...">
+          <div class="carousel-caption">
+            
+            <h2 style="font-size:5vw; color: rgb(228, 217, 217); ">SUPPORT OUR CAUSES</h2>
+            <p style="font-size:2vw; color: rgb(228, 217, 217); ">Your donation, big or small, makes a paw-sitive impact!<br> Help us provide food,shelter,and care to animals in need.<br>Together,let's create a world where every pet is loved and cared for!</p>
+            <a class="btn" href="donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="images/slide 2.jpg" class="d-block w-100 c-img img-fluid responsive" alt="...">
+          <div class="carousel-caption">
+            
+            <h2 style="font-size:5vw; color: rgb(44, 44, 44);">MAKE DIFFERENCE</h2>  
+            <p style="font-size:2vw;  color: rgb(44, 44, 44);">Make a positive impact in the lives of our voiceless friends!<br>Show your love and compassion. Choose the perfect opportunity for you. </p>
+            <a class="btn" href="volunteer.html">Volunteer</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <h1>Don't Shop, Adopt</h1> 
+    <section class="body">
+      <!--h1>Don't Shop ,Adopt</h1-->
+      <br><br>
+      <div class="content">
+         
+        <p>Adopting a pet is a wonderful way to give a loving home to an animal in need. It not only saves a life but also brings immense joy and companionship to your life.</p>
+       <br> <h2>Why Adopt?</h2>
+        <ul>
+           <li>Save a life.</li>
+           <li>Support animal welfare.</li>
+           <li>Find a loyal companion.</li>
+           <li>Experience unconditional love.</li>
+        </ul><br>
+        <h2>How to Adopt?</h2>
+        <p>Visit your local animal shelter or adoption center. Meet the animals available for adoption and choose the one that melts your heart. Follow the adoption process and give a forever home to a furry friend!</p>
+       <br><br> <a href="userpetlist.html" class="btn">Check Out Our Pets</a>
+      </div>
+      <div class="image-container">
+        <img src="images/adopt.jpg" alt="Image 1" class="img-fluid a-im">
+    </div>
+    </section>
+
+    <section class="resources" style="background-image: url(/images/s3.jpeg);">
+      <h1> Pet Care Essentials and Training Guidance </h1><br><br>
+      <div class="row justify-content-center" style="justify-content: center; margin-left: 60px;">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card" style="width: 18rem; display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;">
+            <img src="images/r1.jpg" class="card-img-top" style="justify-content: center;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nutrition and Health Essentials for Pets</h5>
+              <p class="card-text">Explore vital guidelines for pet nutrition,including selecting the right food,understanding dietary needs,& ensuring overall wellness.Discover common health issues and preventive measures for your pet's well-being.</p>
+             <br> <a href="resources.html#r1" class="btn btn-pri">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="images/r2.jpg" class="card-img-top" style="justify-content: center;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Behavioral Training Tips</h5>
+              <p class="card-text">Behavioral training for pets uses positive reinforcement, consistent commands, and early socialization to teach basic commands, address potty training, leash manners, and common behavioral issues for a well-behaved pet.</p>
+            <br>  <a href="resources.html#r2" class="btn btn-pri">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="/Users/user/Downloads/Mi-20240417T074313Z-001/Mi/images/r3.jpg" class="card-img-top" style="justify-content: center;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Grooming and Hygiene Guidance</h5>
+              <p class="card-text">Grooming and hygiene guidance for pets covers brushing, bathing, nail trimming, dental care, parasite prevention, and creating a clean environment. These practices ensure your pet's well-being and promote a healthy lifestyle.</p>
+            <br>  <a href="resources.html#r3" class="btn btn-pri">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+    
+    <section class="wcyd">
+      <h1>What Can You Do?</h1><br><br>
+      <div class="row justify-content-center" style="justify-content: center; margin-left: 60px;">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card" style="width: 18rem; display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;">
+            <img src="images/donate.png" class="card-img-top" style="justify-content: center;" alt="Donate">
+            <div class="card-body">
+              <h5 class="card-title">Donate</h5>
+              <p class="card-text">Support our cause by making a donation. Every contribution helps us care for more animals in need.</p>
+              <br> <a href="donate.html" class="btn btn-pri">Donate</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="images/vol.jpeg" class="card-img-top" style="justify-content: center;" alt="Volunteer">
+            <div class="card-body">
+              <h5 class="card-title">Volunteer</h5>
+              <p class="card-text">Join our team as a volunteer and make a difference in the lives of animals. Your time and skills can change the world for them.</p>
+              <br>  <a href="volunteer.html" class="btn btn-pri">Volunteer</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="images/foster.png" class="card-img-top" style="justify-content: center;" alt="Foster">
+            <div class="card-body">
+              <h5 class="card-title">Foster</h5>
+              <p class="card-text">Provide a temporary home for animals in need by becoming a foster caregiver. Your care can save lives and prepare animals for adoption.</p>
+              <br>
+              <!-- <a href="mailto:pfatvm7700@gmail.com?subject=I%20would%20like%20to%20foster" class="btn btn-pri">Foster</a> -->
+              <button id="fosterButton" class="btn btn-pri">Foster</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <br>
+    </section>
+    
+
+    
+    
+    
+    <section class="about">
+      <h1>About us</h1>
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-md-4">
+            <div class="c2">
+              <h3>Paw House</h3>
+              <p>A compassionate initiative led by a passionate PFA Trivandrum volunteer, dedicated to making a difference in the lives of animals. This page is a heartfelt endeavor focused on nurturing the well-being of our furry friends.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="c3">
+              <h3>Bond with angels</h3>
+              <p>A Non-profit Organization that works under PFA Trivandrum ensuring rescue, fostering, and adoption for needy animals and connecting them with responsible caregivers.<br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<br>  <hr> <br>
+  <section class="video-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="c1">
+          <!-- Add your content here, such as text or images -->
+            <h3>PFA</h3>
+            <p>PFA Thiruvananthapuram is one of the most established animal welfare organizations with over two decades of experience. <br>We have the infrastructure and the space to execute large ventures. <br>We have the best animal rescue center in the city.</p>
+          </div>    
+          </div>
+        <div class="col-md-12">
+          <!-- Paste your YouTube iframe code here -->
+          <!-- Replace the comment below with your actual YouTube iframe code -->
+          <!-- Example: <iframe width="560" height="315" src="https://www.youtube.com/embed/d3QdzLp679o" frameborder="0" allowfullscreen></iframe> -->
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/d3QdzLp679o" frameborder="0" allowfullscreen></iframe>
+          <!-- Your YouTube video iframe code goes here -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="justify-content: center;">
+    <h1>Find Us!</h1>
+    <!-- <iframe src="https://www.google.com/maps/place/Thiruvananthapuram,+Kerala/@8.5000379,76.7593516,11z/data=!3m1!4b1!4m6!3m5!1s0x3b05bbb805bbcd47:0x15439fab5c5c81cb!8m2!3d8.5241391!4d76.9366376!16zL20vMGZrOTg?entry=ttu" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe> -->
+  <!-- Your other content goes here -->
+  <a href="https://www.google.com/maps/place/People+For+Animals,+Trivandrum+Chapter/@8.4655054,77.0412012,15z/data=!4m6!3m5!1s0x3b05b04714be4a8f:0x80e7ec7d6e8a46e7!8m2!3d8.4655426!4d77.0412236!16s%2Fg%2F1q5bm8rny?entry=ttu">
+    <img src="images/loc.jpg" alt="People For Animals, Trivandrum Chapter" width="100%" height="650" > 
+  </a>  
+</section>
+<br><br>  <br><br><br><br><br><br><br><br><br><br>
+  <footer class="footer">
+      <div class="container">
+         <div class="social-media">
+            <a href="https://www.instagram.com/peopleforanimalstrivandrum/?hl=en" class="social-link" target="_blank"><img src="images/insta.png" alt="instagram"></a>
+            <a href="https://www.facebook.com/PFATrivandrum/" class="social-link" target="_blank"><img src="images/fb.png" alt="facebook"></a>
+            <a href="https://x.com/Pfa_Tvm" class="social-link" target="_blank"><img src="images/x.png" alt="x"></a> 
+            <a href="https://www.youtube.com/@peopleforanimalsngo3469#" class="social-link" target="_blank"><img src="images/yt.png" alt="youtube"></a>
+            <a href="mailto:pfatvm7700@gmail.com" class="social-link"><img src="images/mail.png" alt="mail"></a>
+         </div>
+         <div class="contact-info" style="text-align: center;">
+            <p>Contact</p>
+            <p>Email: pfatvm7700@gmail.com</p>
+            <p>Phone: +91 8138911223</p>
+         </div>
+         <p>&copy; 2024 Happy Tails. All Rights Reserved.</p>
+         <p><img src="images/ehi.png" alt="emoji"></p>
+      </div>
+   </footer>  
+   <script>
+
+async function fetchUserProfile(email) {
+        try {
+            const response = await fetch(`http://localhost:4000/user/profile/${email}`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching user profile:", error);
+            return { status: false, msg: "Error fetching user profile" };
+        }
+    }
+
+    async function displayUsername() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const userEmail = urlParams.get('email');
+
+        if (!userEmail) {
+            console.error("No email parameter found in URL");
+            return;
+        }
+
+        const userProfile = await fetchUserProfile(userEmail);
+
+        if (userProfile.status) {
+            const username = userProfile.user.name;
+            const usernameButton = document.getElementById('usernameButton');
+            usernameButton.textContent = username;
+            usernameButton.style.display = 'inline-block'; // Ensure button is displayed
+
+            // Add event listener to the button to handle click event
+            usernameButton.addEventListener('click', () => {
+                window.location.href = `userprofile.html?email=${encodeURIComponent(userEmail)}`;
+            });
+        } else {
+            console.error("Error fetching user profile:", userProfile.msg);
+        }
+        const resourcesButton = document.getElementById('resourceloggedbtn');
+        resourcesButton.href = `resourcelogged.html?email=${encodeURIComponent(userEmail)}`;
+
+        const donateloggedButton = document.getElementById('donateloggedbtn');
+        donateloggedButton.href = `donatelogged.html?email=${encodeURIComponent(userEmail)}`;
+
+        const volunteerloggedButton = document.getElementById('volunteerloggedbtn');
+        volunteerloggedButton.href = `volunteerlogged.html?email=${encodeURIComponent(userEmail)}`;
+
+        const SuccessloggedButton = document.getElementById('successloggedbtn');
+        SuccessloggedButton.href = `successlogged.html?email=${encodeURIComponent(userEmail)}`;
+    }
+
+    // Call displayUsername function when the page loads
+    window.onload = function() {
+        displayUsername();
+    };
+</script>
+</body>
+</html>
